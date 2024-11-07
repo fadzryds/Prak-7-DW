@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aplikasi Buku Favorit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+       
+        body {
+            @apply bg-cover bg-center;
+            background-image: url('tampilan.jpg');
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-gray-100 min-h-screen flex flex-col items-center">
+
+    <h1 class="text-4xl text-center mt-8 font-bold text-gray-800 uppercase tracking-wide">
+        Aplikasi Buku Favorit
+    </h1>
+
+    <div id="session-container" class="mt-8 bg-white bg-opacity-90 p-6 rounded-xl shadow-md w-80">
+        <input type="text" id="namaPengguna" placeholder="Masukkan Nama Anda" class="w-full mb-4 px-4 py-2 rounded-full text-gray-700 bg-white focus:outline-none focus:ring-2 focus:ring-green-500" />
+        <button id="btnSimpanNama" class="w-full py-2 rounded-full bg-gradient-to-r from-green-500 to-green-600 text-white hover:scale-105 transition-transform duration-200">
+            Simpan Nama
+        </button>
+        <h3 id="salamPengguna" class="mt-4 text-lg text-blue-600 text-center"></h3>
+    </div>
+
+    <form id="form-tambah-buku" class="mt-8 bg-white bg-opacity-90 p-6 rounded-xl shadow-md w-80 flex flex-col">
+        <input type="text" id="judul" placeholder="Judul Buku" required class="w-full mb-4 px-4 py-2 rounded-full text-gray-700 bg-white focus:outline-none focus:ring-2 focus:ring-green-500" />
+        <input type="text" id="penulis" placeholder="Penulis" required class="w-full mb-4 px-4 py-2 rounded-full text-gray-700 bg-white focus:outline-none focus:ring-2 focus:ring-green-500" />
+        <input type="number" id="tahun" placeholder="Tahun Terbit" required class="w-full mb-4 px-4 py-2 rounded-full text-gray-700 bg-white focus:outline-none focus:ring-2 focus:ring-green-500" />
+        <button type="submit" class="w-full py-2 rounded-full bg-gradient-to-r from-green-500 to-green-600 text-white hover:scale-105 transition-transform duration-200">
+            Tambah Buku
+        </button>
+    </form>
+
+    <h2 class="mt-8 text-2xl font-semibold text-gray-700">Daftar Buku</h2>
+    <div id="daftar-buku" class="w-full max-w-2xl bg-white bg-opacity-90 p-6 rounded-xl shadow-md mt-4 max-h-96 overflow-y-auto"></div>
+
+    <h2 class="mt-8 text-2xl font-semibold text-gray-700">Buku Favorit</h2>
+    <div id="buku-favorit" class="w-full max-w-2xl bg-white bg-opacity-90 p-6 rounded-xl shadow-md mt-4 max-h-96 overflow-y-auto"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
